@@ -10,7 +10,8 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/*MAIN*/
+/* ----- MAIN ----- */
+/*AREA DI VISUALIZZAZIONE PARTECIPANTI*/
 body > main {
     width: 100%;
     height: 90vh;
@@ -24,16 +25,40 @@ body > main {
     gap: 5px;
 
     color: white;
+
+    position: relative;
 }
 
-body > nav {
-    width: 100%;
-    height: 10vh;
-}
-
+/*CARDS DEI PARTECIPANTI*/
 .card {
     width: 245px;
     height: 145px;
+
+    position: relative;
+}
+
+.card span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 0.8rem;
+    padding: 5px;
+}
+
+/*CONTROLLI MODALITà DI VISUALIZZAZIOE*/
+main #viewControlContainer {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+
+    width: 150px;
+    height: 25px;
+}
+
+/* ----- NAV ----- */
+body > nav {
+    width: 100%;
+    height: 10vh;
 }
 
 /*DEBUG*/
@@ -47,17 +72,12 @@ body > nav {
 
 .debug .card{
     background-color: aquamarine;
-    position: relative;
 }
 
 .debug .card span {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-
     background-color: slateblue;
+}
 
-    padding: 5px;
-
-    font-size: 0.8rem;
+.debug main #viewControlContainer {
+    background-color: yellow;
 }
