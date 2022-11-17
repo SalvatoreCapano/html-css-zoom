@@ -8,6 +8,9 @@
 /*COLOR PALETTE
     main-bg: #000000
     viewControlsContainer items: #4a4a4a
+    nav: #222222
+    end meeting-bg: #4a4a4a
+    shareScreen icon: #4bc800
 */
 
 /*REGOLE GENERALI*/
@@ -88,23 +91,74 @@ body > nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    background-color: #222222;
 }
 
 nav > div {
-    background-color: thistle;
-    height: 60%;
-    width: 100px;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 
+/*PULSANTI NAV*/
+nav > div .navButton {
+    color: white;
+    cursor: pointer;
 
+    padding: 8px;
+}
 
+.navButton:first-child {
+    margin-left: 5px;
+}
+
+.navButton[id] {
+    display: flex;
+    align-items: center;
+}
+
+.navButton[id] > i{
+    font-size: 0.8rem;
+    margin-left: 10px;
+}
+
+.navButton > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navButton > div i {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.navButton > div span {
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+.navButton#shareScreenActions div i {
+    color: #4bc800;
+}
+
+nav #endMeeting {
+    color: red;
+    font-size: 0.8rem;
+    padding: 0 1rem;
+    background-color: #4a4a4a;
+}
 
 
 
 
 /*DEBUG*/
 .debug main {
-    /* background-color: chocolate; */
+    background-color: chocolate;
 }
 
 .debug nav {
@@ -116,11 +170,11 @@ nav > div {
 }
 
 .debug .card span {
-    /* background-color: slateblue; */
+    background-color: slateblue;
 }
 
 .debug main #viewControlsContainer {
-    /* background-color: yellow; */
+    background-color: yellow;
 }
 
 .debug nav > div {
