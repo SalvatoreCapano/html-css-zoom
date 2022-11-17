@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+/*COLOR PALETTE
+    main-bg: #000000
+    viewControlsContainer items: #4a4a4a
+*/
+
 /*REGOLE GENERALI*/
 body {
     font-family: Arial, Helvetica, sans-serif;
@@ -18,15 +23,17 @@ body > main {
 
     padding-top: 90px;
     overflow: scroll;
+    color: white;
+    background-color: black;
 
+    position: relative;
+}
+
+#cardsContainer {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 5px;
-
-    color: white;
-
-    position: relative;
 }
 
 /*CARDS DEI PARTECIPANTI*/
@@ -35,6 +42,11 @@ body > main {
     height: 145px;
 
     position: relative;
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
 }
 
 .card span {
@@ -43,16 +55,29 @@ body > main {
     left: 0;
     font-size: 0.8rem;
     padding: 5px;
+
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 /*CONTROLLI MODALITà DI VISUALIZZAZIOE*/
-main #viewControlContainer {
+main #viewControlsContainer {
     position: absolute;
-    top: 5px;
+    top: 10px;
     right: 5px;
 
-    width: 150px;
-    height: 25px;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+#viewControlsContainer > *{
+    background-color: #4a4a4a;
+    
+    border-radius: 6px;
+
+    padding: 6px;
+    margin-left: 5px;
+    
+    cursor: pointer;
 }
 
 /* ----- NAV ----- */
@@ -71,9 +96,15 @@ nav > div {
     width: 100px;
 }
 
+
+
+
+
+
+
 /*DEBUG*/
 .debug main {
-    background-color: chocolate;
+    /* background-color: chocolate; */
 }
 
 .debug nav {
@@ -85,11 +116,11 @@ nav > div {
 }
 
 .debug .card span {
-    background-color: slateblue;
+    /* background-color: slateblue; */
 }
 
-.debug main #viewControlContainer {
-    background-color: yellow;
+.debug main #viewControlsContainer {
+    /* background-color: yellow; */
 }
 
 .debug nav > div {
